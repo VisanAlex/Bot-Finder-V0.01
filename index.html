@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="index.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" 
+              content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Here a loader is created which 
+             loads till response comes -->
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" 
+                 role="status" id="loading">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <h1>Bot Finder</h1>
+        <button id="btnExport" onclick="exportReportToExcel(this)">Export to EXCEL</button>
+        <h2> Just export to Excel then choose the type for all of them to hh:mm:ss then just do =A1-A2 and copy it for all the needed rows</h2>
+        <!-- table for showing data -->
+        <table id="results"></table>
+
+    </body>
+
+
+</html>
