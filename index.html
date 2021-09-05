@@ -5,26 +5,43 @@
         <script src="https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js"></script>
         <link rel="stylesheet" href="style.css" />
         <meta charset="UTF-8" />
+        <meta http-equiv="content-type" content="text/plain; charset=UTF-8"/>
         <meta name="viewport" 
               content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
     </head>
     <body>
-        <!-- Here a loader is created which 
-             loads till response comes -->
+       
+        <h1>Bot Finder</h1>
+
+        <label>Name</label>
+        <input type="text" placeholder ="cryptomonkeys.wam" id="userinput">
+        <br>
+        <label>Starting</label>
+        <input type="datetime-local" id="userinputdate1">
+        <br>
+        <label>Ending</label>
+        <input type="datetime-local" id="userinputdate2">
+        <button type="submit" onclick="myfunc()" id="demo">Find data</button>
+<br>
+<br>
+        <button id="btnExport" onclick="exportReportToExcel(this)">Export to EXCEL</button>
+        <iframe id="txtArea1" style="display:none"></iframe>
+        <button id="btnExport" onclick="fnExcelReport();">Export to EXCEL (if button 1 broken)</button>
+  
+        <h2> Just export to Excel then choose the type for all of them to hh:mm:ss then just do =A1-A2 and copy it for all the needed rows</h2>
+        <!-- table for showing data -->
+        <table id="table"></table>
+
         <div class="d-flex justify-content-center">
             <div class="spinner-border" 
                  role="status" id="loading">
                 <span class="sr-only">Loading...</span>
             </div>
-        </div>
-        <h1>Bot Finder</h1>
-        <button id="btnExport" onclick="exportReportToExcel(this)">Export to EXCEL</button>
-        <h2> Just export to Excel then choose the type for all of them to hh:mm:ss then just do =A1-A2 and copy it for all the needed rows</h2>
-        <!-- table for showing data -->
-        <table id="results"></table>
+        </div> 
 
     </body>
 
+ 
 
 </html>
