@@ -6,8 +6,8 @@ function myfunc() {
   var date2 = document.getElementById('userinputdate2').value;
 // api url
 let api_url =
-  "https://wax.cryptolions.io/v2/history/get_actions?account="+input+"&skip=0&limit=1000&sort=desc&transfer.to="+input+"&transfer.from=m.federation&after="+date1+"&before="+date2+"";
-
+  "https://wax.eosphere.io/v2/history/get_actions?account="+input+"&skip=0&limit=1000&sort=desc&transfer.to="+input+"&transfer.from=m.federation&after="+date1+"&before="+date2+"";
+ // "https://api.waxsweden.org/v2/history/get_actions?account="+input+"&skip=0&limit=100&sort=desc&transfer.to="+input+"+&transfer.from=m.federation&after="+date1+"+&before="+date2+"";
 // Defining async function
 async function getapi(url) {
   // Storing response
@@ -98,3 +98,7 @@ function exportReportToExcel() {
   
       return (sa);
   }
+
+
+
+  
